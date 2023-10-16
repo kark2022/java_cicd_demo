@@ -43,7 +43,7 @@ jobs:
         run: |
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/java-app:latest
-          docker run -d -p 80:8080 ${{ secrets.DOCKERHUB_USERNAME }}/java-app:latest
+          docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/java-app:latest
         env:
           AWS_INSTANCE_IP: 54.242.12.102
 
